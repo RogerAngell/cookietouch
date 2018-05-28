@@ -101,7 +101,7 @@ export default class Dictionary<T extends number | string, U> implements Iterabl
   }
 
   public next(): IteratorResult<{ key: T, value: U }> {
-    if (this.mIteratorIndex >= this.count() - 1) {
+    if (this.mIteratorIndex >= this.count()) {
       this.mIteratorIndex = 0;
       return {
         done: true,
